@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            margin-left: 550px;
+            margin-top: 60px;
+            height: 350px;
+            width:350px;
+            border-radius: 20px;
+            transition: filter 0.5s ease; /* Add transition for smoother effect */
+        }
+        .button {
+            border: 2px solid black;
+            height: 30px;
+            width: 80px;
+            cursor: pointer;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" src="./img5.jpg"> 
+    <div id="blurButton" class="button" onclick="toggleFilter('blur')">Blur</div>
+    <div id="graybutton" class="button" onclick="toggleFilter('grayscale')">Grayscale</div>
+    <div id="brightnessbutton" class="button" onclick="toggleFilter('brightness')">Brightness</div>
+    <div id="opacitybutton" class="button" onclick="toggleFilter('opacity')">Opacity</div>
+    <div id="saturatebutton" class="button" onclick="toggleFilter('saturate')">Saturation</div>
+    <div id="dropshadow" class="button" onclick="toggleFilter('drop-shadow')">Drop Shadow</div>
+    <div id="huerotate" class="button" onclick="toggleFilter('hue-rotate')">Hue Rotate</div>
+
+    <script>
+        function toggleFilter(filter) {
+            var image = document.getElementById("image");
+            var filterValue = "0"; 
+
+            if (!image.style.filter.includes(filter)) {
+                filterValue = "2"; 
+            }
+
+            
+            switch (filter) {
+                case 'blur':
+                    image.style.filter = `blur(${filterValue}px)`;
+                    break;
+                case 'grayscale':
+                    image.style.filter = `grayscale(${filterValue})`;
+                    break;
+                case 'brightness':
+                    image.style.filter = `brightness(${filterValue})`;
+                    break;
+                case 'opacity':
+                    image.style.filter = `opacity(${filterValue})`;
+                    break;
+                case 'saturate':
+                    image.style.filter = `saturate(${filterValue})`;
+                    break;
+                case 'drop-shadow':
+                    image.style.filter = `drop-shadow(8px 8px 10px gray)`;
+                    break;
+                case 'hue-rotate':
+                    image.style.filter = `hue-rotate(90deg)`;
+                    break;
+                default:
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        background-image: url(./chbheembg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        margin: 30px;
+      }
+      #tempsrc {
+        border: 2px solid lightgrey;
+        height: 400px;
+        width: 400px;
+        border-radius: 20px;
+        margin-left: 570px;
+      }
+      #image {
+        border: 2px solid lightgrey;
+        height: 100px;
+        width: 100px;
+        margin-left: 13vh;
+        margin-top: 100px;
+        border-radius: 20px;
+      }
+      .next {
+        border: 2px solid black;
+        height: 40px;
+        width: 100px;
+        color: white;
+        text-decoration: none;
+        position: relative;
+        left: 1350px;
+        top: 50px;
+        padding: 5px;
+        font-weight: bold;
+      }
+     
+    </style>
+
+  </head>
+  <body>
+    <div>
+      <img id="tempsrc" src="" />
+    </div>
+    <div>
+      <img id="image" src="./bheem.png" onclick="swap(this.src)" />
+      <img id="image" src="./chutki.png" onclick="swap(this.src)" />
+      <img id="image" src="./raju.jpg" onclick="swap(this.src)" />
+      <img id="image" src="./monkey.png" onclick="swap(this.src)" />
+      <img id="image" src="./dolu.jpg" onclick="swap(this.src)" />
+      <img id="image" src="./Kalia.jpg" onclick="swap(this.src)" />
+      <img id="image" src="./total.png" onclick="swap(this.src)" />
+    </div>
+    <script>
+      function swap(src) {
+        document.getElementById("tempsrc").src = src;
+      }
+      var anc = document.createElement("a");
+      anc.setAttribute("class", "next");
+      anc.setAttribute("href", "./index2.html");
+      anc.innerText = "NEXTPAGE";
+      document.body.appendChild(anc);
+    </script>
+  </body>
+</html>
